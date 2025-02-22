@@ -1,20 +1,11 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  theme: {
-    extend: {
-      animation: {
-        'gradient': 'gradientBG 10s ease infinite',
+    darkMode: 'class', // Enable class-based dark mode
+    content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+    theme: {
+      extend: {
+        // Add custom variants here if needed
       },
-      keyframes: {
-        gradientBG: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
-      },
-      backgroundSize: {
-        '400%': '400% 400%',
-      }
     },
-  },
-  plugins: [],
-}
+    plugins: [],
+  };

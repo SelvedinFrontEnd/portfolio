@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
   font-family: "Mulish";
@@ -13,11 +14,7 @@ html {
 body {
   margin: 0;
   font-family: 'Mulish', sans-serif;
-}
-
-/* Dark mode overrides */
-.dark .bg-white {
-  background-color: #1a1a1a !important;
+  
 }
 
 .dark .text-black {

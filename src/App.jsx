@@ -1,32 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('dark-mode') === 'true';
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', darkMode);
+    localStorage.setItem('dark-mode', darkMode);
+  }, [darkMode]);
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
-      <div className='border-6 border-blue-500'>
-      <div className="m-10 border-1 border-blue-500 min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-500">
-        {/* Header with refined toggle button */}
-        <header className="fixed top-4 right-4 z-50">
-          <button 
-            onClick={() => setDarkMode(!darkMode)}
-            className="toggle-button bg-gray-200 dark:bg-gray-700 p-2 rounded-full shadow-md focus:outline-none"
-            title="Toggle Dark Mode"
-          >
-            {darkMode ? '🌙' : '☀️'}
-          </button>
-        </header>
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
-      </div>
-      </div>
+    <div className={`min-h-screen transition-colors duration-500 ease-in-out ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+      <header className="fixed top-4 right-4 z-50">
+        <button 
+          onClick={() => setDarkMode(prev => !prev)}
+          className="toggle-button bg-gray-200 dark:bg-gray-700 p-2 rounded-full shadow-md focus:outline-none"
+          title="Toggle Dark Mode"
+        >
+          {darkMode ? '🌙' : '☀️'}
+        </button>
+      </header>
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }
