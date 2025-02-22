@@ -11,7 +11,7 @@ const About = () => {
         Hi, I'm <span className="font-semibold text-black dark:text-white">Selvedin</span>, a passionate 
         <span className="text-blue-600 dark:text-blue-400 font-semibold"> Web Developer</span> from Bosnia & Herzegovina.  
         I started with <span className="font-semibold">HTML, CSS, and JavaScript</span> and later expanded my knowledge to modern frameworks like 
-        <span className="text-blue-600 dark:text-blue-400 font-semibold"> React, Firebase,</span> and 
+        <span className="text-blue-600 dark:text-blue-400 font-semibold"> React, Firebase, TailwindCSS</span> and 
         <span className="text-blue-600 dark:text-blue-400 font-semibold"> Node.js</span>.
       </p>
 
