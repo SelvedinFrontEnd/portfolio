@@ -24,6 +24,9 @@ const About = () => {
       <p className="text-lg dark:text-white leading-relaxed mb-6">
         Hi, I'm <span className="font-semibold text-black dark:text-white">Selvedin</span>, a passionate <span className="text-blue-600 dark:text-blue-400 font-semibold">FrontEnd Developer</span> from Bosnia & Herzegovina who is dedicated to building scalable and user-friendly web applications.
       </p>
+      <p>
+      From curious coder to dedicated developer, I’m on a journey to craft functional and efficient web solutions that make life easier. Let’s build something great together.
+      </p>
 
       <section className="py-20 px-6 max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-black dark:text-white mb-10">My Tech Stack</h2>
