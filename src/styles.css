@@ -61,3 +61,22 @@ body {
   -webkit-text-fill-color: transparent; /* Chrome, Safari */
   animation: gradient-animation 3s ease infinite;
 }
+
+.flip-card-inner {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.group:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* For Safari */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}

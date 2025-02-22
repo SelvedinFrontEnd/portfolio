@@ -1,44 +1,57 @@
 import React from 'react';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaNodeJs } from "react-icons/fa";
+import { SiFirebase, SiTailwindcss, SiExpress } from "react-icons/si";
 
 const About = () => {
+  const techStack = [
+    { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-5xl" />, desc: "Structure of every web page." },
+    { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-5xl" />, desc: "Styling and layout magic." },
+    { name: "JavaScript", icon: <FaJs className="text-yellow-500 text-5xl" />, desc: "The language of the web." },
+    { name: "React", icon: <FaReact className="text-blue-400 text-5xl" />, desc: "My favorite frontend framework." },
+    { name: "Firebase", icon: <SiFirebase className="text-yellow-400 text-5xl" />, desc: "Backend for authentication & data." },
+    { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400 text-5xl" />, desc: "Rapid styling with utility classes." },
+    { name: "Git", icon: <FaGitAlt className="text-red-500 text-5xl" />, desc: "Version control to track code changes." },
+    { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-5xl" />, desc: "JavaScript runtime for backend development." },
+    { name: "Express", icon: <SiExpress className="text-gray-500 text-5xl" />, desc: "Web framework for Node.js." },
+  ];
+
   return (
-    <section id="about" className="py-20 px-6 max-w-4xl mx-auto text-center ">
+    <section id="about" className="py-20 px-6 max-w-4xl mx-auto text-center">
       <h2 className="text-4xl font-bold text-black dark:text-white mb-6">
         About Me
       </h2>
       
       <p className="text-lg dark:text-white leading-relaxed mb-6">
-        Hi, I'm <span className="font-semibold text-black dark:text-white">Selvedin</span>, a passionate 
-        <span className="text-blue-600 dark:text-blue-400 font-semibold"> Web Developer</span> from Bosnia & Herzegovina.  
-        I started with <span className="font-semibold">HTML, CSS, and JavaScript</span> and later expanded my knowledge to modern frameworks like 
-        <span className="text-blue-600 dark:text-blue-400 font-semibold"> React, Firebase, TailwindCSS</span> and 
-        <span className="text-blue-600 dark:text-blue-400 font-semibold"> Node.js</span>.
+        Hi, I'm <span className="font-semibold text-black dark:text-white">Selvedin</span>, a passionate <span className="text-blue-600 dark:text-blue-400 font-semibold">FrontEnd Developer</span> from Bosnia & Herzegovina who is dedicated to building scalable and user-friendly web applications.
       </p>
 
-      <div className=" dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-bold mb-4">What Drives Me?</h2>
-        <p class="mb-2">
-            I love turning ideas into reality, crafting <span class="font-bold">clean code</span> and <span class="font-bold">smooth user experiences</span>. Problem-solving excites me, and overcoming challenges keeps me motivated. There was a point where <span class="font-bold">JavaScript nearly made me quit</span>, but my passion for coding pushed me through.
-        </p>
-      </div>
-
-      <h3 className="text-2xl font-semibold text-black dark:text-white mt-10 mb-4">
-        Fun Facts 🏆
-      </h3>
-      <div className="flex flex-wrap justify-center gap-4">
-        <span className="bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-200 px-4 py-2 rounded-lg text-lg font-medium">
-          ⚡ Huge Formula 1 Fan
-        </span>
-        <span className="bg-red-100 dark:bg-red-800 text-red-600 dark:text-red-200 px-4 py-2 rounded-lg text-lg font-medium">
-          ❤️ Lifelong Liverpool Supporter
-        </span>
-        <span className="bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-200 px-4 py-2 rounded-lg text-lg font-medium">
-          📖 Always Learning New Tech
-        </span>
-        <span className="bg-yellow-100 dark:bg-yellow-800 text-yellow-600 dark:text-yellow-200 px-4 py-2 rounded-lg text-lg font-medium">
-          💪 Loves Street Workout
-        </span>
-      </div>
+      <section className="py-20 px-6 max-w-4xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-black dark:text-white mb-10">My Tech Stack</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          {techStack.map((tech, index) => (
+            <div
+              key={index}
+              className="group relative w-36 h-36 mx-auto"
+              style={{ perspective: "1000px" }}
+            >
+              <div className="flip-card-inner relative w-full h-full">
+                {/* Front Side */}
+                <div className="flip-card-front absolute w-full h-full flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                  {tech.icon}
+                  <p className="text-lg font-semibold mt-2 text-black dark:text-white">
+                    {tech.name}
+                  </p>
+                </div>
+                {/* Back Side */}
+                <div className="flip-card-back absolute w-full h-full flex items-center justify-center bg-blue-600 dark:bg-blue-700 rounded-lg shadow-lg text-white text-center">
+                  <p className="px-3">{tech.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      
     </section>
   );
 };
