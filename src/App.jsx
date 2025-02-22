@@ -15,7 +15,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ease-in-out ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
       <header className="fixed top-4 right-4 z-50">
         <button 
           onClick={() => setDarkMode(prev => !prev)}
