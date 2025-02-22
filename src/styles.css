@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
+@font-face {
+  font-family: "Mulish";
+  src: url("font/Mulish-VariableFont_wght.ttf");
+}
 
 html {
   scroll-behavior: smooth;
@@ -8,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 /* Dark mode overrides */
@@ -37,4 +41,25 @@ body {
   border: 1px solid #ccc;
   border-radius: 0.375rem;
   margin-bottom: 1rem;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-text {
+  background: linear-gradient(270deg, #D8BFD8, blue); /* Deep Purple to Bright Blue */
+  background-size: 400% 400%;
+  -webkit-background-clip: text;  /* Chrome, Safari */
+  background-clip: text;           /* Standard */
+  -webkit-text-fill-color: transparent; /* Chrome, Safari */
+  animation: gradient-animation 3s ease infinite;
 }

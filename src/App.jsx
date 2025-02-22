@@ -9,7 +9,8 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-500">
+      <div className='border-6 border-blue-500'>
+      <div className="m-10 border-1 border-blue-500 min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-500">
         {/* Header with refined toggle button */}
         <header className="fixed top-4 right-4 z-50">
           <button 
@@ -24,6 +25,7 @@ function App() {
         <About />
         <Projects />
         <Contact />
+      </div>
       </div>
     </div>
   );
