@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center h-screen text-center overflow-hidden bg-white dark:bg-gray-900">
       <div className="relative z-10 px-4">
-        <h1 className="text-7xl font-bold drop-shadow-lg text-gray-900 dark:text-white">
+      <h1 className="text-7xl font-bold drop-shadow-lg animate-gradient-text">
           Hi, I'm Selvedin
         </h1>
         <h2 className="font-bold mt-4 text-4xl mb-4 text-gray-800 dark:text-gray-300">
