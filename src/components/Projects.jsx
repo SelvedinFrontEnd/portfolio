@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import ProjectModal from './ProjectModal';
-import CryptoImage from "../images/CryptoProject.png";
+
+// Import images for Crypto World
+import Crypto3 from "../images/crypto 3.jpg"; // main image for card and modal
+import Crypto5 from "../images/crypto 5.jpg"; // additional image for modal
+
+// Import images for other projects
 import MoviesImage from "../images/MoviesProject.png";
 import ShopImage from "../images/ShopProject.png";
 import SocialImage from "../images/SocialProject.png";
+import CryptoImage from "../images/CryptoProject.png"
 
+// Define your projects data.
+// For "Crypto World", we provide a main image in 'image' and extra images in 'images'.
 const projects = [
   {
     title: "Crypto World",
     description:
       "A feature-rich cryptocurrency platform with real-time data, user authentication, favorites, transaction simulation, and profile editing.",
-    image: CryptoImage,
+    image: CryptoImage, // main image on the card
     liveLink: "https://cryptoscoins.netlify.app/",
     githubLink: "https://github.com/SelvedinFrontEnd/CryptoSiteCoin",
     tech: ["React", "Firebase", "API"],
-    images: [CryptoImage] // Optionally add more images here
+    images: [ Crypto5, Crypto3] // additional images for modal carousel
   },
   {
     title: "Social Network",
@@ -25,7 +33,7 @@ const projects = [
     liveLink: "https://socialselvex.netlify.app/",
     githubLink: "https://github.com/SelvedinFrontEnd/socialnetwork",
     tech: ["React", "Firebase"],
-    images: [SocialImage]
+    images: [] // No additional images; modal will only show the main image.
   },
   {
     title: "Movie Explorer",
@@ -35,7 +43,7 @@ const projects = [
     liveLink: "https://selvexmovies.netlify.app/",
     githubLink: "https://github.com/SelvedinFrontEnd/movies",
     tech: ["React", "API"],
-    images: [MoviesImage]
+    images: [] // Only main image.
   },
   {
     title: "Product Page",
@@ -45,7 +53,7 @@ const projects = [
     liveLink: "https://prodpage.netlify.app/",
     githubLink: "https://github.com/SelvedinFrontEnd/ProductPageMain",
     tech: ["HTML", "CSS", "JavaScript"],
-    images: [ShopImage]
+    images: [] // Only main image.
   }
 ];
 
@@ -88,7 +96,7 @@ const Projects = () => {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()} // Prevents modal from opening when clicking the link
+                onClick={(e) => e.stopPropagation()} // Prevents modal open when clicking link
                 className="text-blue-600 dark:text-blue-400 flex items-center gap-1 hover:underline"
               >
                 <FaExternalLinkAlt /> Live Demo
@@ -97,7 +105,7 @@ const Projects = () => {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()} // Prevents modal from opening when clicking the link
+                onClick={(e) => e.stopPropagation()} // Prevents modal open when clicking link
                 className="dark:text-gray-200 flex items-center gap-1 hover:underline"
               >
                 <FaGithub /> GitHub
