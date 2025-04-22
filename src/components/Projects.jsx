@@ -2,28 +2,66 @@ import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import ProjectModal from './ProjectModal';
 
-// Import images for Crypto World
-import Crypto3 from "../images/crypto 3.jpg"; // main image for card and modal
-import Crypto5 from "../images/crypto 5.jpg"; // additional image for modal
-
-// Import images for other projects
+// Import images
+import Crypto3 from "../images/crypto 3.jpg";
+import Crypto5 from "../images/crypto 5.jpg";
 import MoviesImage from "../images/MoviesProject.png";
 import ShopImage from "../images/ShopProject.png";
 import SocialImage from "../images/SocialProject.png";
-import CryptoImage from "../images/CryptoProject.png"
+import CryptoImage from "../images/CryptoProject.png";
+import TaskImage from "../images/TaskManagerr.jpg"; // 
 
-// Define your projects data.
-// For "Crypto World", we provide a main image in 'image' and extra images in 'images'.
 const projects = [
+  {
+    title: "Task Manager App",
+    description:
+      "A personal productivity tool built to manage daily tasks, track activity, and handle projects with user authentication and a dashboard.",
+    modalDescription: `
+      <p>A personal productivity tool built to manage daily tasks, track activity, and handle projects with user authentication and a dashboard.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Firebase Authentication (Login & Register)</li>
+        <li>Sidebar with full page navigation</li>
+        <li>Task Creation (title, urgency, date, description)</li>
+        <li>Dashboard with stats, upcoming tasks, and recent activity</li>
+        <li>User profile editing</li>
+        <li>Calendar with deadlines</li>
+        <li>Dark mode, search, filter, and sort</li>
+      </ul>
+      <p><strong>Tech Stack:</strong> React, Firebase, Tailwind CSS</p>
+    `,
+    image: TaskImage,
+    liveLink: "https://apptaskmanager.netlify.app/", 
+    githubLink: "https://github.com/SelvedinFrontEnd/taskmanager",
+    tech: ["React", "Firebase", "Tailwind CSS"],
+    images: [] 
+  },
   {
     title: "Crypto World",
     description:
       "A feature-rich cryptocurrency platform with real-time data, user authentication, favorites, transaction simulation, and profile editing.",
-    image: CryptoImage, // main image on the card
+    modalDescription: `
+      <p>A feature-rich cryptocurrency platform with real-time data, user authentication, favorites, transaction simulation, and profile editing.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>User Registration & Login</li>
+        <li>Profile Page</li>
+        <li>Favorites</li>
+        <li>Simulated Deposit & Withdrawal</li>
+        <li>Profile Editing</li>
+      </ul>
+      <p><strong>Challenges & Future Improvements:</strong></p>
+      <ul>
+        <li>Responsive Layout</li>
+        <li>Handling Simulated Transactions</li>
+        <li>Profile Editing Expansion</li>
+      </ul>
+    `,
+    image: CryptoImage,
     liveLink: "https://cryptoscoins.netlify.app/",
     githubLink: "https://github.com/SelvedinFrontEnd/CryptoSiteCoin",
     tech: ["React", "Firebase", "API"],
-    images: [ Crypto5, Crypto3] // additional images for modal carousel
+    images: [Crypto5, Crypto3]
   },
   {
     title: "Social Network",
@@ -33,7 +71,7 @@ const projects = [
     liveLink: "https://socialselvex.netlify.app/",
     githubLink: "https://github.com/SelvedinFrontEnd/socialnetwork",
     tech: ["React", "Firebase"],
-    images: [] // No additional images; modal will only show the main image.
+    images: []
   },
   {
     title: "Movie Explorer",
@@ -43,7 +81,7 @@ const projects = [
     liveLink: "https://selvexmovies.netlify.app/",
     githubLink: "https://github.com/SelvedinFrontEnd/movies",
     tech: ["React", "API"],
-    images: [] // Only main image.
+    images: []
   },
   {
     title: "Product Page",
@@ -53,7 +91,7 @@ const projects = [
     liveLink: "https://prodpage.netlify.app/",
     githubLink: "https://github.com/SelvedinFrontEnd/ProductPageMain",
     tech: ["HTML", "CSS", "JavaScript"],
-    images: [] // Only main image.
+    images: []
   }
 ];
 
@@ -92,20 +130,22 @@ const Projects = () => {
               ))}
             </div>
             <div className="flex justify-between items-center mt-4">
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()} // Prevents modal open when clicking link
-                className="text-blue-600 dark:text-blue-400 flex items-center gap-1 hover:underline"
-              >
-                <FaExternalLinkAlt /> Live Demo
-              </a>
+              {project.liveLink && (
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-blue-600 dark:text-blue-400 flex items-center gap-1 hover:underline"
+                >
+                  <FaExternalLinkAlt /> Live Demo
+                </a>
+              )}
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()} // Prevents modal open when clicking link
+                onClick={(e) => e.stopPropagation()}
                 className="dark:text-gray-200 flex items-center gap-1 hover:underline"
               >
                 <FaGithub /> GitHub
@@ -115,7 +155,6 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Modal for the selected project */}
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
