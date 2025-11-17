@@ -12,7 +12,6 @@ const About = () => {
     { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400 text-5xl" />, desc: "Rapid styling with utility classes." },
     { name: "Git", icon: <FaGitAlt className="text-red-500 text-5xl" />, desc: "Version control to track code changes." },
     { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-5xl" />, desc: "JavaScript runtime for backend development." },
-    { name: "Express", icon: <SiExpress className="text-gray-500 text-5xl" />, desc: "Web framework for Node.js." },
   ];
 
   return (
