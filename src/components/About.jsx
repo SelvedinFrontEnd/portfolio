@@ -11,7 +11,6 @@ const About = () => {
     { name: "Firebase", icon: <SiFirebase className="text-yellow-400 text-5xl" />, desc: "Backend for authentication & data." },
     { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400 text-5xl" />, desc: "Rapid styling with utility classes." },
     { name: "Git", icon: <FaGitAlt className="text-red-500 text-5xl" />, desc: "Version control to track code changes." },
-    { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-5xl" />, desc: "JavaScript runtime for backend development." },
   ];
 
   return (
