@@ -8,6 +8,7 @@ const About = () => {
     { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-5xl" />, desc: "Styling and layout magic." },
     { name: "JavaScript", icon: <FaJs className="text-yellow-500 text-5xl" />, desc: "The language of the web." },
     { name: "React", icon: <FaReact className="text-blue-400 text-5xl" />, desc: "My favorite frontend framework." },
+    {name: "Next.js, icon: <SiNextdotjs className="text-white text-5xl" />, desc: "React framework for fast, scalable web applications."},
     { name: "Firebase", icon: <SiFirebase className="text-yellow-400 text-5xl" />, desc: "Backend for authentication & data." },
     { name: "TailwindCSS", icon: <SiTailwindcss className="text-teal-400 text-5xl" />, desc: "Rapid styling with utility classes." },
     { name: "Git", icon: <FaGitAlt className="text-red-500 text-5xl" />, desc: "Version control to track code changes." },
