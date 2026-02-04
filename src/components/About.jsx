@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaNodeJs } from "react-icons/fa";
-import { SiFirebase, SiTailwindcss, SiExpress } from "react-icons/si";
+import { SiFirebase, SiTailwindcss, SiExpress, SiNextdotjs  } from "react-icons/si";
 
 const About = () => {
   const techStack = [
