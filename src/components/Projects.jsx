@@ -10,9 +10,9 @@ import ShopImage from "../images/ShopProject.png";
 import SocialImage from "../images/SocialProject.png";
 import CryptoImage from "../images/CryptoProject.png";
 import TaskImage from "../images/TaskManagerr.jpg"; 
-import NewspaperImage1 from "../images/Newspaper-1.jpg"; 
-import NewspaperImage2 from "../images/Newspaper-2.jpg"; 
-import NewspaperImage3 from "../images/Newspaper-3.jpg"; 
+import NewspaperImage1 from "../images/Newspaper-1.png"; 
+import NewspaperImage2 from "../images/Newspaper-2.png"; 
+import NewspaperImage3 from "../images/Newspaper-3.png"; 
 
 const projects = [
   {
