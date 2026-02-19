@@ -9,9 +9,34 @@ import MoviesImage from "../images/MoviesProject.png";
 import ShopImage from "../images/ShopProject.png";
 import SocialImage from "../images/SocialProject.png";
 import CryptoImage from "../images/CryptoProject.png";
-import TaskImage from "../images/TaskManagerr.jpg"; // 
+import TaskImage from "../images/TaskManagerr.jpg"; 
+import NewspaperImage1 from "../images/Newspaper-1.jpg"; 
+import NewspaperImage2 from "../images/Newspaper-2.jpg"; 
+import NewspaperImage3 from "../images/Newspaper-3.jpg"; 
 
 const projects = [
+  {
+    title: "Newspaper Portal",
+    description:
+      "A modern multi-category news platform featuring dynamic data fetching, optimized loading states, reusable components, and a responsive newspaper-style UI.",
+    modalDescription: `
+      <p>A modern digital newspaper application built with React that delivers categorized news content through a clean, responsive interface.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Multiple news categories (General, Formula 1, Football, NBA)</li>
+        <li>Context-based state management for scalable architecture</li>
+        <li>Optimized loading states with reusable skeleton components</li>
+        <li>Dedicated article detail pages</li>
+        <li>Responsive design</li>
+      </ul>
+      <p><strong>Tech Stack:</strong> React, Context API, Firebase/API Integration, Tailwind CSS, React Router</p>
+    `,
+    image: NewspaperImage1,
+    liveLink: "https://selvedinews.netlify.app/", 
+    githubLink: "https://github.com/SelvedinFrontEnd/newspaper",
+    tech: ["React", "Firebase", "Tailwind CSS"],
+    images: [NewspaperImage2, NewspaperImage3] 
+  },
   {
     title: "Task Manager App",
     description:
