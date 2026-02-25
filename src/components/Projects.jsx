@@ -61,7 +61,7 @@ const projects = [
   githubLink: "https://github.com/SelvedinFrontEnd/typingtest",
   tech: ["HTML", "CSS", "JavaScript"],
   images: [TypingTestImage2, TypingTestImage3]
-  }
+  },
   {
     title: "Task Manager App",
     description:
