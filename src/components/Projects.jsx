@@ -13,6 +13,9 @@ import TaskImage from "../images/TaskManagerr.jpg";
 import NewspaperImage1 from "../images/Newspaper-1.png"; 
 import NewspaperImage2 from "../images/Newspaper-2.png"; 
 import NewspaperImage3 from "../images/Newspaper-3.png"; 
+import TypingTestImage1 from "../images/Type1.png"; 
+import TypingTestImage2 from "../images/Type2.png"; 
+import TypingTestImage3 from "../images/Type3.png"; 
 
 const projects = [
   {
