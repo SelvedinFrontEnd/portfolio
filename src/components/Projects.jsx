@@ -38,6 +38,28 @@ const projects = [
     images: [NewspaperImage2, NewspaperImage3] 
   },
   {
+  title: "Typing Test / Typing Game",
+  description:
+    "A web-based typing game that tests your typing speed and accuracy with multiple time modes, difficulty levels, and best WPM tracking.",
+  modalDescription: `
+    <p>A fun and interactive typing test application built with HTML, CSS, and JavaScript.</p>
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Real-time WPM and accuracy calculation</li>
+      <li>Multiple time modes: 60-second timed mode or unlimited passage mode</li>
+      <li>Difficulty levels: Easy, Medium, Hard</li>
+      <li>Tracks and saves your best WPM using local storage</li>
+      <li>Responsive design for desktop and mobile devices</li>
+    </ul>
+    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+  `,
+  image: TypingTestImage1,
+  liveLink: "https://selvetype.netlify.app/", 
+  githubLink: "https://github.com/SelvedinFrontEnd/typingtest",
+  tech: ["HTML", "CSS", "JavaScript"],
+  images: [TypingTestImage2, TypingTestImage3]
+}
+  {
     title: "Task Manager App",
     description:
       "A personal productivity tool built to manage daily tasks, track activity, and handle projects with user authentication and a dashboard.",
