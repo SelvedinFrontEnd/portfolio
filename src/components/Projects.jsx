@@ -16,6 +16,7 @@ import NewspaperImage3 from "../images/Newspaper-3.png";
 import TypingTestImage1 from "../images/Type1.png"; 
 import TypingTestImage2 from "../images/Type2.png"; 
 import TypingTestImage3 from "../images/Type3.png"; 
+import TypingTestImage4 from "../images/Type4.png"; 
 
 const projects = [
   {
@@ -56,11 +57,11 @@ const projects = [
     </ul>
     <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
   `,
-  image: TypingTestImage1,
+  image: TypingTestImage4,
   liveLink: "https://selvetype.netlify.app/", 
   githubLink: "https://github.com/SelvedinFrontEnd/typingtest",
   tech: ["HTML", "CSS", "JavaScript"],
-  images: [TypingTestImage2, TypingTestImage3]
+  images: [TypingTestImage1, TypingTestImage2, TypingTestImage3]
   },
   {
     title: "Task Manager App",
